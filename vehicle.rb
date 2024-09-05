@@ -3,7 +3,7 @@ require_relative "move"
 class Vehicle
   include Mooove
 
-  attr_accessor :make, :model, :year
+  #attr_accessor :make, :model, :year
 
   def initialize(make, model, year)
     @make = make

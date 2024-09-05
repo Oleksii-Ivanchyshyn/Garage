@@ -1,10 +1,11 @@
 require_relative "vehicle"
 
 class   Garage
-  attr_reader :vehicles
+  #attr_reader :vehicles
 
   def initialize
     @vehicles = []
+    @service = []
   end
 
   def self.create_vehicle(type, make, model, year)
@@ -29,4 +30,17 @@ class   Garage
    puts "Vehicles in the garage:"
    vehicles.each  { |vehicle| puts " - #{vehicle.details}" }
   end
+
+  def driving_to_service
+    vehicles += service
+    vehicles.clear
+     puts "garage is empty: #{garage.list_vehicles}"
+  end
+
+  def back_to_garage
+    puts "cars back to garage"
+    service +=service
+    service.clear
+  end
+
 end
