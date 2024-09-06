@@ -1,13 +1,13 @@
 module Mooove
-  def  Move
-    puts "#{self.class} is moving"
+  def  moving
+    puts "#{details} is moving"
   end
 
-  def Turn_left
-    puts "#{self.class} turn left"
+  def turn_left
+    puts "#{details} turn left"
   end
 
-  def Mooove_out_all
+  def mooove_out_all
     puts "move all cars to service"
     vehicles.each  { |vehicle| puts " - #{vehicle.details}" }
   end

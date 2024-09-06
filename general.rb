@@ -16,8 +16,12 @@ garage.add_vehicle(truck2)
 garage.add_vehicle(motorcycle1)
 garage.add_vehicle(motorcycle2)
 
-car1.move
-truck1.move
-motorcycle1.move
+#car1.move
+#truck1.move
+#motorcycle1.move
 
-garage.list_vehicles
+#garage.list_vehicles
+#truck1.turn_left
+#truck2.moving
+#garage.mooove_out_all
+truck1.move_to(garage, service)
