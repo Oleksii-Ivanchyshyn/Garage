@@ -1,13 +1,12 @@
 require_relative "vehicle"
 
 class   Garage
-  include Mooove
+  #include Mooove
 
   attr_accessor :vehicles
 
-  def initialize
+  def initialize(vehicles)
     @vehicles = []
-    @service = []
   end
 
   def self.create_vehicle(type, make, model, year)
@@ -33,19 +32,20 @@ class   Garage
    vehicles.each  { |vehicle| puts " - #{vehicle.details}" }
   end
 
-  def move_to(garage, service)
-    garage.delete(self)
-    service.push(self)
-    puts " #{details} heading to service"
-    #vehicles += service
-    # vehicles.clear
-    # puts "garage is empty: #{garage.list_vehicles}"
+end
+
+class Service
+  include Mooove
+
+  attr_accessor :service
+  
+  def initialize(service)
+   @service = []
   end
 
-  def back_to_garage
-    puts "cars back to garage"
-    service +=service
-    service.clear
+  def list_service
+   puts "Vehicles in the service:"
+   service.each  { |vehicle| puts " - #{vehicle.details}" }
   end
 
 end
